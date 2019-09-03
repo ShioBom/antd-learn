@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Input, Select, Button,Icon } from "antd";
-
+import styles from './index.less'
+// FIXME: 新增按钮的样式
 const { Option } = Select;
 let id=0;
 class PriceInput extends React.Component {
@@ -119,7 +120,6 @@ class Demo extends React.Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         const { keys, formDatas } = values;
-        // console.log('Received values of form: ', values);
         console.log('Merged values:', keys.map(key => formDatas[key]));
       }
     });
