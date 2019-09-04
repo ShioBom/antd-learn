@@ -24,7 +24,10 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "lint": "eslint --ext .js src && npm run lint:style",
+    "lint:fix": "eslint --quiet --fix --ext .js src && npm run lint:style",
+    "lint:style": "stylelint \"src/**/*.less\" --syntax less"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +43,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-react": "^7.14.3",
+    "stylelint": "^10.1.0"
   }
 }
