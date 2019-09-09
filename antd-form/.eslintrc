@@ -12,6 +12,8 @@
     },
     "rules": { // eslint 规则设置
       "linebreak-style":["error","windows"],
+      "arrow-parens": [0], // 箭头函数参数不必需加括号
+      "comma-dangle": [2, "never"],//对象字面量项尾不能有逗号
       "quotes":[0,"single"], // 字符串单双引号都可以
       "generator-star-spacing": [0], // 强制 generator 函数中 * 号周围有空格
       "consistent-return": [0], // 要求使用一致的 return 语句
