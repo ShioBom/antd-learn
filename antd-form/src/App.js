@@ -3,9 +3,11 @@ import { Layout, Menu, Breadcrumb, Icon } from "antd";
 import "./App.css";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
-import FormItem from "./pages/FormItem";
 import Home from "./pages/Home";
 import TableLearn from "./pages/TableLearn";
+import Portals from './components/Portals'
+import TextEditor from "./components/TextEditor";
+import LessLearn from "./components/LessLearn";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -90,8 +92,11 @@ export default class App extends Component {
                   {/* <FormItem/> */}
                   <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/form" component={FormItem} />
-                    <Route exact path="/table" component={TableLearn} />
+                    {/* <Route exact path="/form" component={FormItem} /> */}
+                    <Route exact path="/form" component={TableLearn} />
+                    <Route exact path="/portals" component={Portals} />
+                    <Route exact path="/text-editor" component={TextEditor} />
+                    <Route exact path="/less" component={LessLearn} />
                   </Switch>
                 </div>
               </Content>

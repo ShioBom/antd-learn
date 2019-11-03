@@ -1,0 +1,29 @@
+#abc {
+  .other {
+    display: block;
+    width: 200px;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover {
+      background-color: white;
+    }
+  }
+  .border {
+      border: 1px solid skyblue;
+  }
+}
+
+@my-selector: selectors;
+.LessLearn {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .@{my-selector}{
+        background-color: pink;
+        width: 200px;
+    }
+    span{
+        color: orange;
+        #abc>.other;
+    }
+}
